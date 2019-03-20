@@ -7,7 +7,7 @@ FROM ubuntu:18.04
 
 MAINTAINER Pterodactyl Software, <support@pterodactyl.io>
 
-RUN apt update && (echo 8 | apt-get -y install mono-runtime) \
+RUN apt update && ((while true; do echo 8; done) | apt-get -y install mono-runtime) \
     && adduser -D -h /home/container container
 
 USER container
